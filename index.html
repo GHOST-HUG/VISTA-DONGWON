@@ -1,0 +1,2842 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>브레인시티 비스타동원 | 평택 분양</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0078C1;
+    --blue-light: #00AEEF;
+    --blue-dark: #005a91;
+    --blue-pale: #e8f4fb;
+    --blue-mid: #d0eaf8;
+    --white: #ffffff;
+    --black: #0a0a0a;
+    --gray-900: #1a1a2e;
+    --gray-700: #3d3d5c;
+    --gray-500: #6b7280;
+    --gray-300: #d1d5db;
+    --gray-100: #f3f4f6;
+    --gold: #c9a84c;
+    --red-brand: #A01540;
+    --font: 'Noto Sans KR', sans-serif;
+    --radius: 16px;
+    --radius-sm: 8px;
+    --shadow: 0 4px 24px rgba(0,120,193,0.12);
+    --shadow-lg: 0 16px 48px rgba(0,120,193,0.2);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family: var(--font);
+    color: var(--black);
+    background: var(--white);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== TOP NAVBAR ===== */
+  .top-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: transparent;
+    border-bottom: none;
+  }
+  .top-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .top-nav-phone {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 6px 16px;
+    border-radius: 100px;
+    transition: background 0.2s;
+  }
+  .top-nav-phone:hover { background: rgba(255,255,255,0.2); }
+  .top-nav-phone .phone-label { font-size: 12px; opacity: 0.75; font-weight: 400; margin-right: 2px; }
+
+  /* ===== FLOATING CTA ===== */
+  .float-cta {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 999;
+    padding: 12px 16px 20px;
+    background: linear-gradient(to top, rgba(255,255,255,1) 70%, rgba(255,255,255,0));
+    pointer-events: none;
+  }
+  .float-cta-row {
+    display: flex;
+    gap: 10px;
+    pointer-events: all;
+  }
+  @media (min-width: 768px) {
+    .float-cta {
+      padding: 12px 0 20px;
+    }
+    .float-cta-row {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+  }
+  .float-btn-kakao {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FEE500;
+    color: #3C1E1E;
+    text-align: center;
+    padding: 16px 10px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+  .float-btn-consult {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 16px 10px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,120,193,0.45);
+    position: relative;
+    overflow: hidden;
+  }
+  .float-btn-consult::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60px; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2.5s infinite;
+  }
+  @keyframes shimmer { to { left: 200%; } }
+
+  /* ===== HERO LOGO ===== */
+  .hero-logo-wrap {
+    position: relative;
+    padding: 28px 24px 0;
+    margin-bottom: 8px;
+  }
+  .hero-ci-logo {
+    width: 240px;
+    height: auto;
+    opacity: 0.92;
+    filter: drop-shadow(0 2px 12px rgba(0,0,0,0.2));
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100svh;
+    background: linear-gradient(160deg, #003d6b 0%, #0078C1 45%, #00AEEF 100%);
+    background-image: url('https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/main2.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.3) 100%);
+  }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+  }
+  #hero-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .hero-badge-row {
+    display: flex;
+    gap: 8px;
+    padding: 0 24px;
+    margin-bottom: 20px;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .hero-badge {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 100px;
+    backdrop-filter: blur(8px);
+    letter-spacing: 0.2px;
+  }
+  .hero-badge.highlight {
+    background: rgba(255,255,255,0.95);
+    color: var(--blue);
+    border-color: transparent;
+    font-weight: 700;
+  }
+  .hero-content {
+    padding: 0 24px;
+    position: relative;
+  }
+
+  /* ===== HERO DESKTOP ===== */
+  @media (min-width: 768px) {
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto 1fr auto auto auto;
+      padding: 0;
+    }
+    .hero-bg-pattern { grid-column: 1 / 5; grid-row: 1 / 7; }
+    #hero-canvas { grid-column: 1 / 5; grid-row: 1 / 7; }
+    .hero-badge-row {
+      grid-column: 2 / 4;
+      grid-row: 2;
+      padding: 0;
+      margin-top: 100px;
+      margin-bottom: 0;
+      align-self: start;
+    }
+    .hero-content {
+      grid-column: 2 / 4;
+      grid-row: 3;
+      padding: 40px 0 0;
+      align-self: center;
+    }
+    .hero-stats {
+      grid-column: 2 / 4;
+      grid-row: 4;
+      margin: 24px 0 0;
+      align-self: end;
+    }
+    .hero-cta {
+      grid-column: 2 / 4;
+      grid-row: 5;
+      margin-top: 12px;
+      margin-bottom: 40px;
+      padding: 0;
+      align-self: end;
+    }
+    .hero-scroll {
+      grid-column: 2 / 4;
+      grid-row: 6;
+      align-self: end;
+      padding-bottom: 20px;
+      margin-top: 0;
+    }
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 400;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .hero-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .brand-icon {
+    background: rgba(255,255,255,0.95);
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 900;
+    padding: 4px 9px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+  }
+  .brand-name {
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .hero-title {
+    font-size: clamp(30px, 8vw, 44px);
+    font-weight: 900;
+    color: #003d6b;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+    display: inline-block;
+    background: rgba(255,255,255,0.8);
+    padding: 8px 20px;
+    border-radius: 14px;
+    color: var(--blue);
+    box-shadow:
+      0 0 12px rgba(0,174,239,0.8),
+      0 0 28px rgba(0,174,239,0.5),
+      0 0 55px rgba(0,174,239,0.3),
+      inset 0 0 0 1.5px rgba(0,174,239,0.4);
+  }
+  .hero-title span { color: rgba(255,255,255,0.65); font-size: 0.6em; font-weight: 400; }
+  .hero-sub2 { color: rgba(255,255,255,0.85); font-size: 13px; font-weight: 500; margin-top: 10px; margin-bottom: 8px; }
+  .hero-tagline {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    font-weight: 400;
+    margin-top: 14px;
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 24px 24px;
+    backdrop-filter: blur(8px);
+  }
+  .hero-stat {
+    background: rgba(0,0,0,0.15);
+    padding: 16px 10px;
+    text-align: center;
+  }
+  .hero-stat-num {
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .hero-stat-num span { font-size: 13px; font-weight: 500; }
+  .hero-stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 400;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 10px;
+    padding: 0 24px;
+  }
+  .hero-cta a {
+    flex: 1;
+    padding: 15px 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.2px;
+  }
+  .cta-primary {
+    background: rgba(255,255,255,0.95);
+    color: var(--blue);
+  }
+  .cta-secondary {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(8px);
+    flex: 0.6 !important;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-scroll span {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 32px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+    animation: scrollAnim 1.5s ease-in-out infinite;
+  }
+  @keyframes scrollAnim {
+    0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+  }
+
+  /* ===== PREMIUM HERO ROW ===== */
+  .premium-hero-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .premium-hero-img-slot {
+    flex: 0 0 130px;
+    width: 130px;
+    height: 170px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--gray-100);
+    border: 2px dashed var(--gray-300);
+    position: relative;
+    flex-shrink: 0;
+  }
+  .premium-hero-img-slot img[src=""] { display: none; }
+  .premium-hero-img-slot img:not([src=""]) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .premium-hero-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 100%;
+    color: var(--gray-500);
+    text-align: center;
+  }
+  .premium-hero-img-slot img:not([src=""]) + .premium-hero-img-placeholder { display: none; }
+  .premium-hero-img-placeholder svg { opacity: 0.35; }
+  .premium-hero-img-placeholder span { font-size: 11px; font-weight: 500; }
+  .premium-hero-text {
+    flex: 1;
+  }
+  .premium-hero-text .section-title {
+    margin-bottom: 8px;
+  }
+  .premium-hero-text .section-desc {
+    margin-bottom: 0;
+  }
+
+  /* ===== SECTION IMAGE SLOT ===== */
+  .section-img-slot {
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 24px;
+    background: var(--gray-100);
+    border: 2px dashed var(--gray-300);
+    position: relative;
+  }
+  .section-img-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .section-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 40px 20px;
+    min-height: 200px;
+    color: var(--gray-500);
+    text-align: center;
+  }
+  .section-img-placeholder svg {
+    opacity: 0.35;
+  }
+  .section-img-placeholder span {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+  }
+  .section-img-placeholder small {
+    font-size: 11px;
+    color: var(--gray-300);
+  }
+  .section-img-slot.has-img .section-img-placeholder { display: none; }
+  .section-img-slot:not(.has-img) img { display: none; }
+
+  /* ===== SECTION COMMON ===== */
+  section { padding: 30px 0; }
+  .section-inner { padding: 0 20px; }
+  @media (min-width: 768px) {
+    .section-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+  }
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--blue-pale);
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 6px; height: 6px;
+    background: var(--blue);
+    border-radius: 50%;
+  }
+  .section-title {
+    font-size: clamp(22px, 6vw, 30px);
+    font-weight: 900;
+    color: var(--gray-900);
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+    margin-bottom: 6px;
+  }
+  .section-title em {
+    color: var(--blue);
+    font-style: normal;
+  }
+  .section-desc {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+  .divider {
+    height: 8px;
+    background: var(--gray-100);
+  }
+
+  /* ===== NOTICE BANNER ===== */
+  .notice-banner {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    padding: 18px 20px;
+  }
+  .notice-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  @media (min-width: 768px) {
+    .notice-banner { padding: 18px 0; }
+    .notice-banner-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+  }
+  .notice-icon {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    display: flex; align-items:center; justify-content:center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .notice-text { color: #fff; }
+  .notice-text strong { display:block; font-size:14px; font-weight:700; margin-bottom:2px; }
+  .notice-text span { font-size:12px; opacity:0.85; }
+
+  /* ===== PREMIUM 6 ===== */
+  .premium-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .premium-card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-100);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .premium-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--blue-light));
+    border-radius: var(--radius) var(--radius) 0 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .premium-card:hover::after { opacity: 1; }
+  .premium-card:hover { box-shadow: var(--shadow); }
+  .premium-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .premium-img-slot {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .premium-img-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .premium-img-slot img[src=""] {
+    display: none;
+  }
+  .premium-img-slot:has(img[src=""]) {
+    border: 2px dashed #c0cfe0;
+    background: #f4f8fc;
+    color: #90a4b8;
+    font-size: 12px;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .premium-img-slot:has(img[src=""])::after {
+    content: '이미지';
+    font-size: 11px;
+    color: #90a4b8;
+  }
+  .premium-img-slot:has(img[src=""])::before {
+    content: '🖼';
+    font-size: 24px;
+  }
+  .premium-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .premium-detail {
+    font-size: 12px;
+    color: var(--gray-500);
+    line-height: 1.6;
+  }
+  .premium-detail strong {
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  /* ===== UNIT TYPES ===== */
+  .unit-section {
+    background: var(--gray-100);
+  }
+  .unit-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+    scrollbar-width: none;
+  }
+  .unit-tabs::-webkit-scrollbar { display:none; }
+  .unit-tab {
+    flex-shrink: 0;
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1.5px solid var(--gray-300);
+    background: var(--white);
+    color: var(--gray-500);
+    transition: all 0.2s;
+  }
+  .unit-tab.active {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+  }
+  .unit-content { display: none; }
+  .unit-content.active { display: block; }
+  .unit-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .unit-header {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .unit-type-name { font-size: 22px; font-weight: 900; }
+  .unit-type-pyeong { font-size: 14px; opacity:0.85; margin-top:2px; }
+  .unit-count-badge {
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 8px 14px;
+    text-align: center;
+  }
+  .unit-count-badge span { display:block; font-size:11px; opacity:0.8; }
+  .unit-count-badge strong { font-size:22px; font-weight:900; }
+  .unit-floor-img {
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--gray-100);
+    position: relative;
+  }
+  .floor-placeholder {
+    text-align: center;
+    color: var(--gray-300);
+  }
+  .floor-placeholder svg { width:80px; height:80px; opacity:0.4; }
+  .floor-placeholder p { font-size:12px; margin-top:8px; }
+  .unit-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 16px;
+    gap: 12px;
+  }
+  .unit-info-item { }
+  .unit-info-label { font-size:11px; color:var(--gray-500); margin-bottom:3px; font-weight:500; text-transform:uppercase; letter-spacing:0.5px; }
+  .unit-info-val { font-size:15px; font-weight:700; color:var(--gray-900); }
+  .unit-price-row {
+    margin: 0 16px 16px;
+    background: var(--blue-pale);
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .unit-price-label { font-size:13px; color:var(--blue); font-weight:600; }
+  .unit-price-badge {
+    background: var(--blue);
+    color: #fff;
+    font-size:12px;
+    font-weight:700;
+    padding: 5px 12px;
+    border-radius: 100px;
+  }
+  .unit-cta {
+    margin: 0 16px 16px;
+    display: block;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* ===== LOCATION ===== */
+  .location-section {
+    background: linear-gradient(180deg, #f8fbff 0%, var(--white) 100%);
+  }
+  .transport-card {
+    background: var(--white);
+    border: 1.5px solid var(--blue-mid);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .transport-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .transport-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--blue-pale);
+    display: flex; align-items:center; justify-content:center;
+    font-size: 22px;
+  }
+  .transport-title { font-size:16px; font-weight:700; color:var(--gray-900); }
+  .transport-sub { font-size:12px; color:var(--gray-500); margin-top:2px; }
+  .transport-items { display:flex; flex-direction:column; gap:8px; }
+  .transport-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--gray-100);
+    border-radius: 8px;
+  }
+  .transport-item-name { font-size:13px; font-weight:600; color:var(--gray-900); }
+  .transport-item-dist {
+    font-size:12px;
+    color: var(--blue);
+    font-weight:700;
+    background: var(--blue-pale);
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
+
+  /* ===== KAIST HIGHLIGHT ===== */
+  .kaist-highlight {
+    background: linear-gradient(135deg, #003d6b 0%, var(--blue) 100%);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .kaist-highlight::before {
+    content: 'KAIST';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.05);
+    letter-spacing: -4px;
+  }
+  .kaist-highlight h3 { font-size:18px; font-weight:900; color:#fff; margin-bottom:6px; }
+  .kaist-highlight p { font-size:13px; color:rgba(255,255,255,0.75); line-height:1.6; }
+  .kaist-dist {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 100px;
+    padding: 6px 14px;
+    margin-top: 12px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .kaist-dist span {
+    background: rgba(255,255,255,0.95);
+    color: var(--blue);
+    font-size:11px;
+    font-weight:800;
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+
+  /* ===== FUTURE VALUE (호재 블러) ===== */
+  .future-section {
+    background: var(--gray-900);
+    padding: 60px 0;
+  }
+  .future-section .section-label {
+    background: rgba(0,120,193,0.2);
+    color: var(--blue-light);
+  }
+  .future-section .section-title { color: #fff; }
+  .future-section .section-desc { color: rgba(255,255,255,0.5); }
+  .future-cards { display:flex; flex-direction:column; gap:10px; }
+  .future-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    padding: 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .future-num {
+    width: 32px; height: 32px;
+    background: var(--blue);
+    border-radius: 8px;
+    display: flex; align-items:center; justify-content:center;
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .future-info { flex:1; }
+  .future-title { font-size:15px; font-weight:700; color:#fff; margin-bottom:4px; }
+  .future-blur-wrap { position:relative; }
+  .future-blur-text {
+    font-size:13px;
+    color:rgba(255,255,255,0.65);
+    line-height:1.6;
+  }
+  .future-blur-overlay { display: none; }
+  .future-lock { display: none; }
+  .future-cta-row {
+    margin-top: 20px;
+    background: rgba(0,120,193,0.15);
+    border: 1px solid rgba(0,120,193,0.3);
+    border-radius: var(--radius);
+    padding: 18px;
+    text-align: center;
+  }
+  .future-cta-row p { font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:10px; line-height:1.6; }
+  .future-cta-row a {
+    display:inline-block;
+    background:var(--blue);
+    color:#fff;
+    padding:12px 24px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+  }
+
+  /* ===== FREE ITEMS ===== */
+  /* ===== SLIDER COMMON ===== */
+  .img-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-top: 20px;
+    background: #f0f0f0;
+  }
+  .img-slider-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+    will-change: transform;
+  }
+  .img-slider-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .img-slider-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .img-slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 12px;
+  }
+  .img-slider-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .img-slider-dot.active {
+    background: var(--blue);
+    transform: scale(1.3);
+  }
+  .img-slider-btn {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 50%;
+    width: 34px; height: 34px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .img-slider-btn.prev { left: 10px; }
+  .img-slider-btn.next { right: 10px; }
+
+  /* ===== COMMUNITY SECTION ===== */
+  .community-section { background: #fafafa; }
+  .community-section .section-label { background: rgba(139,0,50,0.08); color: #8b0032; }
+
+  /* ===== SMART SYSTEM SECTION ===== */
+  .smart-section { background: #fff; }
+  .smart-section .section-label { background: rgba(0,120,193,0.08); color: #0078c1; }
+  .smart-feature-list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .smart-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    background: #f7f9fc;
+    border-radius: 10px;
+  }
+  .smart-feature-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .smart-feature-text strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 2px;
+  }
+  .smart-feature-text span {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .free-section {
+    background: var(--blue-pale);
+  }
+  .free-section .section-label {
+    background: rgba(0,120,193,0.1);
+  }
+  .free-category {
+    margin-bottom: 20px;
+  }
+  .free-category-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .free-category-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--blue-mid);
+  }
+  .free-tags { display:flex; flex-wrap:wrap; gap:8px; }
+  .free-tag {
+    background: var(--white);
+    border: 1.5px solid var(--blue-mid);
+    color: var(--gray-700);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 100px;
+  }
+  .free-tag.expand {
+    border-color: var(--blue);
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  /* ===== BRAND TRUST ===== */
+  .trust-section { background: var(--white); }
+  .trust-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .trust-stat {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    color: #fff;
+  }
+  .trust-stat-num { font-size:32px; font-weight:900; line-height:1; margin-bottom:4px; }
+  .trust-stat-num span { font-size:16px; }
+  .trust-stat-label { font-size:12px; opacity:0.8; line-height:1.4; }
+  .trust-items { display:flex; flex-direction:column; gap:10px; }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--gray-100);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .trust-item-icon { font-size:24px; flex-shrink:0; }
+  .trust-item-text { }
+  .trust-item-title { font-size:14px; font-weight:700; color:var(--gray-900); margin-bottom:2px; }
+  .trust-item-sub { font-size:12px; color:var(--gray-500); }
+
+  /* ===== FORM ===== */
+  .form-section {
+    background: linear-gradient(180deg, #f0f8ff 0%, #fff 30%);
+    padding-bottom: 120px;
+  }
+  .form-head {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 50%, var(--blue-light) 100%);
+    margin: 0 -20px 28px;
+    padding: 30px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .form-head::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .form-head-label {
+    font-size:12px;
+    color:rgba(255,255,255,0.7);
+    font-weight:500;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .form-head-title {
+    font-size:22px;
+    font-weight:900;
+    color:#fff;
+    line-height:1.25;
+    letter-spacing:-0.5px;
+    margin-bottom:6px;
+  }
+  .form-head-sub {
+    font-size:13px;
+    color:rgba(255,255,255,0.75);
+    line-height:1.6;
+  }
+  .form-benefits {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  .form-benefit {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 100px;
+  }
+  .form-group { margin-bottom: 14px; }
+  .form-label {
+    display:block;
+    font-size:13px;
+    font-weight:700;
+    color:var(--gray-700);
+    margin-bottom:6px;
+  }
+  .form-label span { color:#e53935; }
+  .form-input, .form-select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid var(--gray-300);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: var(--font);
+    color: var(--gray-900);
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .form-input:focus, .form-select:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(0,120,193,0.1);
+  }
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+  }
+  .agree-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 14px;
+    background: var(--gray-100);
+    border-radius: 10px;
+  }
+  .agree-checkbox {
+    width: 20px; height: 20px;
+    accent-color: var(--blue);
+    flex-shrink: 0;
+    margin-top: 1px;
+    cursor: pointer;
+  }
+  .agree-text { font-size:13px; color:var(--gray-500); line-height:1.6; }
+  .agree-text a { color:var(--blue); text-decoration:underline; }
+  .form-submit {
+    width: 100%;
+    padding: 17px;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: -0.3px;
+    font-family: var(--font);
+    box-shadow: 0 6px 20px rgba(0,120,193,0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .form-submit:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 10px rgba(0,120,193,0.25);
+  }
+  .form-submit:disabled { opacity:0.7; cursor:not-allowed; }
+  .form-notice {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--gray-500);
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  /* Success State */
+  #form-success {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .success-icon {
+    width: 72px; height: 72px;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    border-radius: 50%;
+    display: flex; align-items:center; justify-content:center;
+    font-size: 32px;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 24px rgba(0,120,193,0.3);
+  }
+  .success-title { font-size:22px; font-weight:900; color:var(--gray-900); margin-bottom:8px; letter-spacing:-0.5px; }
+  .success-msg { font-size:14px; color:var(--gray-500); line-height:1.8; }
+  .success-msg strong { color:var(--blue); }
+
+  /* ===== KAKAO CHANNEL ===== */
+  .kakao-section {
+    background: #FEE500;
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .kakao-left { }
+  .kakao-title { font-size:15px; font-weight:700; color:#3C1E1E; margin-bottom:4px; }
+  .kakao-sub { font-size:12px; color:rgba(60,30,30,0.65); }
+  .kakao-btn {
+    background: #3C1E1E;
+    color: #FEE500;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--gray-900);
+    padding: 30px 20px 40px;
+  }
+  .footer-brand {
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .footer-brand span { color: var(--blue-light); }
+  .footer-addr { font-size:12px; color:rgba(255,255,255,0.4); line-height:1.7; margin-bottom:16px; }
+  .footer-disclaimer {
+    font-size:11px;
+    color:rgba(255,255,255,0.25);
+    line-height:1.7;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 14px;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: none;
+  }
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+
+  /* ===== CONSULT/VISIT TABS ===== */
+  .cv-card { width:100%; background:#fff; border:1px solid #CBD5E1; border-radius:16px; overflow:hidden; box-shadow:0 4px 6px rgba(0,0,0,.04), 0 20px 48px rgba(0,90,160,.10); margin-top:0; }
+  .cv-tabs { display:grid; grid-template-columns:1fr 1fr; border-bottom:2px solid #CBD5E1; background:#F1F8FD; }
+  @keyframes cv-tab-pulse { 0%,100%{box-shadow:none;} 50%{box-shadow:inset 0 -2px 8px rgba(0,120,193,.08);} }
+  @keyframes cv-icon-bounce { 0%,100%{transform:translateY(0);} 40%{transform:translateY(-3px);} 70%{transform:translateY(-1px);} }
+  .cv-tab-btn { padding:18px 16px 16px; background:none; border:none; cursor:pointer; font-family:var(--font); font-size:16px; font-weight:600; color:var(--gray-500); display:flex; align-items:center; justify-content:center; gap:7px; transition:color .2s,background .2s; position:relative; letter-spacing:.2px; }
+  .cv-tab-btn::after { content:''; position:absolute; bottom:-2px; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--blue-dark),var(--blue-light)); border-radius:3px 3px 0 0; opacity:0; transition:opacity .2s; }
+  .cv-tab-btn.active { color:var(--blue); background:#fff; animation:cv-tab-pulse 2.5s ease-in-out infinite; }
+  .cv-tab-btn.active::after { opacity:1; }
+  .cv-tab-btn.active .cv-tab-icon { animation:cv-icon-bounce 1.8s ease-in-out infinite; display:inline-block; }
+  .cv-tab-btn:hover:not(.active) { color:var(--blue); background:rgba(0,120,193,.04); }
+  .cv-panel { display:none; padding:28px 28px 28px; }
+  .cv-panel.active { display:block; }
+  .cv-row { display:grid; gap:14px; margin-bottom:14px; }
+  .cv-row.c2 { grid-template-columns:1fr 1fr; }
+  .cv-row.c1 { grid-template-columns:1fr; }
+  .cv-field { display:flex; flex-direction:column; gap:6px; }
+  .cv-field label { font-size:12px; font-weight:600; color:var(--gray-700); letter-spacing:.3px; }
+  .cv-field label .req { color:#EF4444; margin-left:2px; }
+  .cv-field label .req::after { content:' (필수)'; color:#EF4444; }
+  .cv-field input, .cv-field select { width:100%; background:#F8FBFE; border:1.5px solid #CBD5E1; border-radius:10px; color:var(--gray-900); font-family:var(--font); font-size:15px; padding:12px 14px; outline:none; transition:border-color .2s,box-shadow .2s,background .2s; -webkit-appearance:none; appearance:none; }
+  .cv-field input::placeholder { color:#9CA3AF; }
+  .cv-field select option { background:#fff; color:var(--gray-900); }
+  .cv-field input:hover, .cv-field select:hover { border-color:#93C5FD; }
+  .cv-field input:focus, .cv-field select:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(0,120,193,.15); background:#fff; }
+  .cv-sw { position:relative; }
+  .cv-sw::after { content:''; position:absolute; right:13px; top:50%; transform:translateY(-50%); border-left:5px solid transparent; border-right:5px solid transparent; border-top:6px solid var(--blue); pointer-events:none; }
+  .cv-sw select { padding-right:34px; cursor:pointer; }
+  .cv-ph-wrap { display:flex; align-items:stretch; border:1.5px solid #CBD5E1; border-radius:10px; overflow:hidden; transition:border-color .2s,box-shadow .2s; background:#F8FBFE; }
+  .cv-ph-wrap:focus-within { border-color:var(--blue); box-shadow:0 0 0 3px rgba(0,120,193,.15); background:#fff; }
+  .cv-ph-prefix { padding:12px 11px 12px 14px; font-size:15px; font-weight:700; color:var(--blue); white-space:nowrap; border-right:1.5px solid #CBD5E1; background:#EBF5FC; }
+  .cv-ph-input { flex:1; background:none; border:none; outline:none; color:var(--gray-900); font-family:var(--font); font-size:15px; padding:12px 14px; min-width:0; }
+  .cv-ph-input::placeholder { color:#9CA3AF; font-size:13px; }
+  /* Calendar */
+  .cv-cal-wrap { background:#F8FBFE; border:1.5px solid #CBD5E1; border-radius:10px; overflow:hidden; }
+  .cv-cal-head { display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid #CBD5E1; background:#EBF5FC; }
+  .cv-cal-head span { font-size:14px; font-weight:700; color:var(--blue); }
+  .cv-cal-nav { background:#fff; border:1.5px solid #CBD5E1; border-radius:6px; color:var(--blue); font-size:16px; width:30px; height:30px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .15s; }
+  .cv-cal-nav:hover { background:var(--blue); color:#fff; border-color:var(--blue); }
+  .cv-cal-dow { display:grid; grid-template-columns:repeat(7,1fr); padding:8px 8px 4px; }
+  .cv-cal-dow span { text-align:center; font-size:11px; font-weight:700; color:var(--gray-500); }
+  .cv-cal-dow span:first-child { color:#EF4444; }
+  .cv-cal-dow span:last-child  { color:#3B82F6; }
+  .cv-cal-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:3px; padding:4px 8px 10px; }
+  .cv-cal-day { aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:13px; border-radius:8px; cursor:pointer; border:none; background:none; color:var(--gray-900); font-family:var(--font); transition:all .15s; }
+  .cv-cal-day:hover:not(:disabled):not(.empty) { background:#EBF5FC; color:var(--blue); font-weight:600; }
+  .cv-cal-day.sel { background:var(--blue) !important; color:#fff !important; font-weight:700; }
+  .cv-cal-day.today { outline:2px solid var(--blue-light); outline-offset:-1px; }
+  .cv-cal-day:disabled { color:#D1D5DB; cursor:not-allowed; }
+  .cv-cal-day.sun { color:#EF4444; }
+  .cv-cal-day.sat { color:#3B82F6; }
+  .cv-cal-day.sel.sun, .cv-cal-day.sel.sat { color:#fff !important; }
+  .cv-cal-day:disabled.sun { color:#FCA5A5; }
+  .cv-cal-day:disabled.sat { color:#BFDBFE; }
+  .cv-cal-sel-disp { padding:10px 14px; border-top:1px solid #CBD5E1; font-size:13px; color:var(--gray-500); display:flex; align-items:center; gap:8px; background:#F8FBFE; }
+  .cv-cal-sel-disp .dval { color:var(--blue); font-weight:700; }
+  .cv-cal-sel-disp .dval.empty { color:var(--gray-500); font-weight:400; }
+  /* Agree */
+  .cv-agree { display:flex; align-items:flex-start; gap:10px; margin:18px 0 20px; cursor:pointer; user-select:none; }
+  .cv-cb-box { flex-shrink:0; width:20px; height:20px; border:2px solid #CBD5E1; border-radius:4px; background:#F8FBFE; display:flex; align-items:center; justify-content:center; transition:all .2s; margin-top:1px; }
+  .cv-cb-box.on { background:var(--blue); border-color:var(--blue); }
+  .cv-cb-box.on::after { content:''; display:block; width:5px; height:9px; border:2px solid #fff; border-top:none; border-left:none; transform:rotate(45deg) translateY(-1px); }
+  .cv-agree-text { font-size:12px; color:var(--gray-500); line-height:1.65; word-break:keep-all; }
+  .cv-agree-text b { color:var(--blue); font-weight:600; }
+  /* Submit */
+  .cv-sub-btn { width:100%; padding:16px; border:none; border-radius:50px; background:linear-gradient(90deg, var(--blue-dark) 0%, var(--blue) 50%, var(--blue-light) 100%); color:#fff; font-family:var(--font); font-size:16px; font-weight:700; letter-spacing:.8px; cursor:pointer; position:relative; overflow:hidden; transition:transform .15s,box-shadow .2s; box-shadow:0 4px 16px rgba(0,120,193,.35); }
+  .cv-sub-btn::before { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(255,255,255,.15) 0%,transparent 50%); }
+  .cv-sub-btn:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,120,193,.45); }
+  .cv-sub-btn:active { transform:none; }
+  .cv-sub-btn:disabled { opacity:.55; cursor:not-allowed; transform:none; }
+  .cv-note { text-align:center; font-size:12px; color:var(--gray-500); margin-top:13px; }
+  .cv-note b { color:var(--blue); font-weight:600; }
+  /* Error / Success */
+  .cv-err { display:none; background:#FEF2F2; border:1.5px solid #FCA5A5; border-radius:8px; padding:11px 14px; font-size:13px; color:#DC2626; margin-bottom:14px; }
+  .cv-ok { display:none; flex-direction:column; align-items:center; text-align:center; padding:32px 20px 8px; gap:14px; }
+  .cv-ok .cv-ok-ico { width:68px; height:68px; border-radius:50%; background:linear-gradient(135deg,var(--blue-dark),var(--blue-light)); display:flex; align-items:center; justify-content:center; font-size:28px; font-weight:700; color:#fff; box-shadow:0 4px 20px rgba(0,120,193,.35); }
+  .cv-ok h2 { font-size:20px; font-weight:700; color:var(--gray-900); }
+  .cv-ok p { font-size:13px; color:var(--gray-500); line-height:1.8; word-break:keep-all; }
+  .cv-ok p b { color:var(--blue); }
+  @media(max-width:480px) { .cv-panel{padding:22px 16px 22px;} .cv-row.c2{grid-template-columns:1fr;} .cv-tab-btn{font-size:15px;} }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP NAVBAR ===== -->
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <div class="top-nav-logo">
+      <svg viewBox="0 0 260 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:180px;height:auto;">
+        <circle cx="26" cy="28" r="22" stroke="white" stroke-width="2" fill="none"/>
+        <ellipse cx="26" cy="28" rx="22" ry="10" stroke="white" stroke-width="1.2" fill="none"/>
+        <line x1="26" y1="6" x2="26" y2="50" stroke="white" stroke-width="1.2"/>
+        <line x1="4" y1="28" x2="48" y2="28" stroke="white" stroke-width="1.2"/>
+        <text x="56" y="23" font-family="Arial, sans-serif" font-size="20" font-weight="800" font-style="italic" fill="white" letter-spacing="-0.5">Dongwon</text>
+        <text x="57" y="40" font-family="Arial, sans-serif" font-size="10.5" font-weight="400" fill="rgba(255,255,255,0.8)" letter-spacing="1.2">Construction Industries</text>
+      </svg>
+    </div>
+    <a href="tel:1688-5925" class="top-nav-phone">
+      📞 1688-5925
+    </a>
+  </div>
+</nav>
+
+<!-- ===== FLOATING CTA ===== -->
+<div class="float-cta">
+  <div class="float-cta-row">
+    <a href="tel:1688-5925" class="float-btn-consult">📞 전화 상담</a>
+    <a href="https://open.kakao.com/o/s63wBkmi" class="float-btn-kakao" target="_blank">💬 오픈카톡 1:1 문의</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-bg-pattern"></div>
+  <canvas id="hero-canvas"></canvas>
+
+  <div class="hero-badge-row" style="margin-top: 80px;">
+    <span class="hero-badge highlight">신규 분양</span>
+    <span class="hero-badge">경기도 평택</span>
+    <span class="hero-badge">브레인시티 4BL</span>
+    <span class="hero-badge">2028.12 입주예정</span>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-sub">VISTA DONGWON · BRAINCITY</p>
+    <div class="hero-brand">
+      <span class="brand-icon">DW</span>
+      <span class="brand-name">동원개발 프리미엄 브랜드</span>
+    </div>
+    <h1 class="hero-title">브레인시티<br>비스타동원</h1>
+    <p class="hero-sub2">평택의 새로운 기준</p>
+    <p class="hero-tagline">KAIST 도보 1분 · 아주대병원 도보 8분<br>첨단 반도체 미래도시의 완벽한 가치</p>
+
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">1,600<span>세대</span></div>
+      <div class="hero-stat-label">총 세대수</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">14<span>개동</span></div>
+      <div class="hero-stat-label">최고 35층</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">59~106<span>㎡</span></div>
+      <div class="hero-stat-label">평형 구성</div>
+    </div>
+  </div>
+
+  <div class="hero-cta">
+    <a href="#consult-form" class="cta-primary">분양가 확인하기</a>
+    <a href="#unit-section" class="cta-secondary">평형 보기</a>
+  </div>
+
+  <div class="hero-scroll">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== NOTICE BANNER ===== -->
+<div class="notice-banner">
+  <div class="notice-banner-inner">
+    <div class="notice-icon">📢</div>
+    <div class="notice-text">
+      <strong>지금 상담 신청 시 층별 가격표 즉시 안내</strong>
+      <span>분양가 · 잔여세대 · 특별혜택 포함 ✔</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===== UNIT TYPES ===== -->
+<section class="unit-section" id="unit-section">
+  <div class="section-inner">
+    <span class="section-label">단지안내</span>
+    <h2 class="section-title">평형별<br><em>세대 구성</em></h2>
+    <p class="section-desc">총 5가지 타입 · 1,600세대 전 세대 남향위주 설계</p>
+
+    <!-- 단지안내 이미지 슬롯 -->
+    <div class="section-img-slot has-img" id="img-complex">
+      <img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Complex-layout.avif" alt="단지 배치도">
+      <div class="section-img-placeholder">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="16" width="16" height="26" rx="2" stroke="#0078C1" stroke-width="2"/>
+          <rect x="26" y="10" width="16" height="32" rx="2" stroke="#0078C1" stroke-width="2"/>
+          <line x1="4" y1="42" x2="44" y2="42" stroke="#0078C1" stroke-width="2"/>
+          <rect x="10" y="22" width="4" height="4" rx="1" fill="#0078C1" opacity="0.5"/>
+          <rect x="10" y="30" width="4" height="4" rx="1" fill="#0078C1" opacity="0.5"/>
+          <rect x="30" y="16" width="4" height="4" rx="1" fill="#0078C1" opacity="0.5"/>
+          <rect x="30" y="24" width="4" height="4" rx="1" fill="#0078C1" opacity="0.5"/>
+          <rect x="30" y="32" width="4" height="4" rx="1" fill="#0078C1" opacity="0.5"/>
+        </svg>
+        <span>단지안내 이미지</span>
+        <small>권장 사이즈: 750 × 400px</small>
+      </div>
+    </div>
+
+    <div class="unit-tabs">
+      <div class="unit-tab active" onclick="switchTab('59A', this)">59A</div>
+      <div class="unit-tab" onclick="switchTab('84A', this)">84A</div>
+      <div class="unit-tab" onclick="switchTab('84B', this)">84B</div>
+      <div class="unit-tab" onclick="switchTab('84C', this)">84C</div>
+      <div class="unit-tab" onclick="switchTab('106A', this)">106A</div>
+    </div>
+
+    <!-- 59A -->
+    <div class="unit-content active" id="tab-59A">
+      <div class="unit-card">
+        <div class="unit-header">
+          <div>
+            <div class="unit-type-name">59A 타입</div>
+            <div class="unit-type-pyeong">공급면적 25.26평</div>
+          </div>
+          <div class="unit-count-badge">
+            <span>총 세대</span>
+            <strong>283</strong>
+          </div>
+        </div>
+        <div class="unit-floor-img">
+          <img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/plane59.avif" alt="59A 타입 평면도" style="width:100%;border-radius:10px;display:block;">
+        </div>
+        <div class="unit-info-grid">
+          <div class="unit-info-item">
+            <div class="unit-info-label">전용면적</div>
+            <div class="unit-info-val">59.98㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">공급면적</div>
+            <div class="unit-info-val">83.57㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">방 구성</div>
+            <div class="unit-info-val">방3 욕실2</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">향</div>
+            <div class="unit-info-val">남향위주</div>
+          </div>
+        </div>
+        <div class="unit-price-row">
+          <span class="unit-price-label">💰 분양가</span>
+          <span class="unit-price-badge">상담 시 안내</span>
+        </div>
+        <a href="#consult-form" class="unit-cta">59A 분양가 + 잔여세대 확인하기 →</a>
+      </div>
+    </div>
+
+    <!-- 84A -->
+    <div class="unit-content" id="tab-84A">
+      <div class="unit-card">
+        <div class="unit-header">
+          <div>
+            <div class="unit-type-name">84A 타입</div>
+            <div class="unit-type-pyeong">공급면적 34.70평</div>
+          </div>
+          <div class="unit-count-badge">
+            <span>총 세대</span>
+            <strong>279</strong>
+          </div>
+        </div>
+        <div class="unit-floor-img">
+          <img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/plane84A.avif" alt="84A 타입 평면도" style="width:100%;border-radius:10px;display:block;">
+        </div>
+        <div class="unit-info-grid">
+          <div class="unit-info-item">
+            <div class="unit-info-label">전용면적</div>
+            <div class="unit-info-val">84.93㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">공급면적</div>
+            <div class="unit-info-val">114.73㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">방 구성</div>
+            <div class="unit-info-val">방3 욕실2</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">향</div>
+            <div class="unit-info-val">남향위주</div>
+          </div>
+        </div>
+        <div class="unit-price-row">
+          <span class="unit-price-label">💰 분양가</span>
+          <span class="unit-price-badge">상담 시 안내</span>
+        </div>
+        <a href="#consult-form" class="unit-cta">84A 분양가 + 잔여세대 확인하기 →</a>
+      </div>
+    </div>
+
+    <!-- 84B -->
+    <div class="unit-content" id="tab-84B">
+      <div class="unit-card">
+        <div class="unit-header">
+          <div>
+            <div class="unit-type-name">84B 타입</div>
+            <div class="unit-type-pyeong">공급면적 35.28평</div>
+          </div>
+          <div class="unit-count-badge">
+            <span>총 세대</span>
+            <strong>468</strong>
+          </div>
+        </div>
+        <div class="unit-floor-img">
+          <img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/plane84B.avif" alt="84B 타입 평면도" style="width:100%;border-radius:10px;display:block;">
+        </div>
+        <div class="unit-info-grid">
+          <div class="unit-info-item">
+            <div class="unit-info-label">전용면적</div>
+            <div class="unit-info-val">84.80㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">공급면적</div>
+            <div class="unit-info-val">116.64㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">방 구성</div>
+            <div class="unit-info-val">방4 욕실2</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">향</div>
+            <div class="unit-info-val">남향위주</div>
+          </div>
+        </div>
+        <div class="unit-price-row">
+          <span class="unit-price-label">💰 분양가</span>
+          <span class="unit-price-badge">상담 시 안내</span>
+        </div>
+        <a href="#consult-form" class="unit-cta">84B 분양가 + 잔여세대 확인하기 →</a>
+      </div>
+    </div>
+
+    <!-- 84C -->
+    <div class="unit-content" id="tab-84C">
+      <div class="unit-card">
+        <div class="unit-header">
+          <div>
+            <div class="unit-type-name">84C 타입</div>
+            <div class="unit-type-pyeong">공급면적 34.80평</div>
+          </div>
+          <div class="unit-count-badge">
+            <span>총 세대</span>
+            <strong>192</strong>
+          </div>
+        </div>
+        <div class="unit-floor-img">
+          <img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/plane84C.avif" alt="84C 타입 평면도" style="width:100%;border-radius:10px;display:block;">
+        </div>
+        <div class="unit-info-grid">
+          <div class="unit-info-item">
+            <div class="unit-info-label">전용면적</div>
+            <div class="unit-info-val">84.94㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">공급면적</div>
+            <div class="unit-info-val">115.05㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">방 구성</div>
+            <div class="unit-info-val">방3 욕실2</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">향</div>
+            <div class="unit-info-val">남향위주</div>
+          </div>
+        </div>
+        <div class="unit-price-row">
+          <span class="unit-price-label">💰 분양가</span>
+          <span class="unit-price-badge">상담 시 안내</span>
+        </div>
+        <a href="#consult-form" class="unit-cta">84C 분양가 + 잔여세대 확인하기 →</a>
+      </div>
+    </div>
+
+    <!-- 106A -->
+    <div class="unit-content" id="tab-106A">
+      <div class="unit-card">
+        <div class="unit-header">
+          <div>
+            <div class="unit-type-name">106A 타입</div>
+            <div class="unit-type-pyeong">공급면적 43.60평</div>
+          </div>
+          <div class="unit-count-badge">
+            <span>총 세대</span>
+            <strong>378</strong>
+          </div>
+        </div>
+        <div class="unit-floor-img">
+          <img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/plane106.avif" alt="106A 타입 평면도" style="width:100%;border-radius:10px;display:block;">
+        </div>
+        <div class="unit-info-grid">
+          <div class="unit-info-item">
+            <div class="unit-info-label">전용면적</div>
+            <div class="unit-info-val">106.89㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">공급면적</div>
+            <div class="unit-info-val">144.12㎡</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">방 구성</div>
+            <div class="unit-info-val">방4 욕실2</div>
+          </div>
+          <div class="unit-info-item">
+            <div class="unit-info-label">향</div>
+            <div class="unit-info-val">남향위주</div>
+          </div>
+        </div>
+        <div class="unit-price-row">
+          <span class="unit-price-label">💰 분양가</span>
+          <span class="unit-price-badge">상담 시 안내</span>
+        </div>
+        <a href="#consult-form" class="unit-cta">106A 분양가 + 잔여세대 확인하기 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== FREE ITEMS ===== -->
+<section class="free-section">
+  <div class="section-inner">
+    <span class="section-label">FREE ITEMS</span>
+    <h2 class="section-title">기본 및 확장 시<br><em>다양한 무상 제공</em></h2>
+    <p class="section-desc">유럽형 프리미엄 마감재로 입주 즉시 완성된 인테리어</p>
+
+    <div class="free-category">
+      <div class="free-category-title">기본 무상제공</div>
+      <div class="free-tags">
+        <span class="free-tag">강마루</span>
+        <span class="free-tag">주방 3구 인덕션</span>
+        <span class="free-tag">주방 레인지후드</span>
+        <span class="free-tag">사각 싱크볼+고급수전</span>
+        <span class="free-tag">주방발코니 2단 선반</span>
+        <span class="free-tag">거실 홈네트워크월패드</span>
+        <span class="free-tag">욕실 투피스 양변기</span>
+        <span class="free-tag">LED 조명</span>
+        <span class="free-tag">선반일체형 샤워수전</span>
+        <span class="free-tag">부부욕실 스피커폰</span>
+        <span class="free-tag">해바라기 수전</span>
+        <span class="free-tag">일반타일</span>
+        <span class="free-tag">현관신발장</span>
+        <span class="free-tag">주방가구(기본형)</span>
+      </div>
+    </div>
+
+    <div class="free-category">
+      <div class="free-category-title">확장 무상제공</div>
+      <div class="free-tags">
+        <span class="free-tag expand">거실 아트월 (포슬린 타일)</span>
+        <span class="free-tag expand">주방벽체 (세라믹 타일)</span>
+        <span class="free-tag expand">주방 아일랜드장</span>
+        <span class="free-tag expand">음식물 탈수기</span>
+        <span class="free-tag expand">주방 광파오븐</span>
+        <span class="free-tag expand">주방 액정 TV</span>
+        <span class="free-tag expand">냉장고장</span>
+        <span class="free-tag expand">안방 드레스룸 공간</span>
+        <span class="free-tag expand">안방 발코니 전동 빨래건조대</span>
+        <span class="free-tag expand">PL창 시트지 마감</span>
+        <span class="free-tag expand">부부욕실 분리형 비데</span>
+        <span class="free-tag expand">2단 이너서랍+수저함</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== COMMUNITY ===== -->
+<section class="community-section fade-up">
+  <div class="section-inner">
+    <span class="section-label">COMMUNITY</span>
+    <h2 class="section-title">입주민만을 위한<br><em>커뮤니티 시설</em></h2>
+    <p class="section-desc">B1F · B2F · 1F에 걸친 풍부한 주민공동시설</p>
+
+    <div class="img-slider" id="community-slider">
+      <button class="img-slider-btn prev" onclick="slideMove('community-slider',-1)">&#8249;</button>
+      <button class="img-slider-btn next" onclick="slideMove('community-slider',1)">&#8250;</button>
+      <div class="img-slider-track">
+        <div class="img-slider-slide"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Common-facilities-1F.avif" alt="주민공동시설 1F"></div>
+        <div class="img-slider-slide"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Common-facilities-B1F.avif" alt="주민공동시설 B1F"></div>
+        <div class="img-slider-slide"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Common-facilities-B2F.avif" alt="주민공동시설 B2F"></div>
+      </div>
+    </div>
+    <div class="img-slider-dots" id="community-slider-dots">
+      <button class="img-slider-dot active" onclick="slideTo('community-slider',0)"></button>
+      <button class="img-slider-dot" onclick="slideTo('community-slider',1)"></button>
+      <button class="img-slider-dot" onclick="slideTo('community-slider',2)"></button>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== SMART SYSTEM ===== -->
+<section class="smart-section fade-up">
+  <div class="section-inner">
+    <span class="section-label">SMART SYSTEM</span>
+    <h2 class="section-title">일상을 더 편리하고 안전하게<br><em>스마트 시스템</em></h2>
+    <p class="section-desc">보다 앞선 생활로 안내하는 스마트 홈 시스템</p>
+
+    <div class="img-slider" id="smart-slider">
+      <button class="img-slider-btn prev" onclick="slideMove('smart-slider',-1)">&#8249;</button>
+      <button class="img-slider-btn next" onclick="slideMove('smart-slider',1)">&#8250;</button>
+      <div class="img-slider-track">
+        <div class="img-slider-slide"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/smart-system.avif" alt="스마트 시스템 이미지 1"></div>
+        <div class="img-slider-slide"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/smart-system2.avif" alt="스마트 시스템 이미지 2"></div>
+      </div>
+    </div>
+    <div class="img-slider-dots" id="smart-slider-dots">
+      <button class="img-slider-dot active" onclick="slideTo('smart-slider',0)"></button>
+      <button class="img-slider-dot" onclick="slideTo('smart-slider',1)"></button>
+    </div>
+
+    <div class="smart-feature-list">
+      <div class="smart-feature-item">
+        <div class="smart-feature-icon">📦</div>
+        <div class="smart-feature-text">
+          <strong>무인택배 시스템</strong>
+          <span>부재시 안전하게 택배수령 및 보관</span>
+        </div>
+      </div>
+      <div class="smart-feature-item">
+        <div class="smart-feature-icon">💡</div>
+        <div class="smart-feature-text">
+          <strong>일괄소등 시스템</strong>
+          <span>외출시 현관에서 집안의 조명을 한 번에 소등</span>
+        </div>
+      </div>
+      <div class="smart-feature-item">
+        <div class="smart-feature-icon">🚗</div>
+        <div class="smart-feature-text">
+          <strong>원패스 시스템</strong>
+          <span>주차위치 확인시스템, 공동현관 자동문 자동 오픈, 엘리베이터 자동 호출</span>
+        </div>
+      </div>
+      <div class="smart-feature-item">
+        <div class="smart-feature-icon">📹</div>
+        <div class="smart-feature-text">
+          <strong>안전보안 시스템</strong>
+          <span>방문자 로비폰 영상통화, 현관카메라 모션인식녹화, 지하주차장 비상벨 시스템</span>
+        </div>
+      </div>
+      <div class="smart-feature-item">
+        <div class="smart-feature-icon">🌿</div>
+        <div class="smart-feature-text">
+          <strong>에코그린 라이프 시스템</strong>
+          <span>헤파필터 클린에어 시스템, 산소발생기</span>
+        </div>
+      </div>
+      <div class="smart-feature-item">
+        <div class="smart-feature-icon">🌐</div>
+        <div class="smart-feature-text">
+          <strong>홈네트워크 시스템</strong>
+          <span>방문차량 예약, 원격검침시스템, 차량도착 알림서비스, 비상전원 자동절체 시스템, 스크린 슬라이딩 기능</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== LOCATION ===== -->
+<section class="location-section" id="location-section">
+  <div class="section-inner">
+    <span class="section-label">광역 입지</span>
+    <h2 class="section-title">대한민국 최고의<br><em>미래가치 입지</em></h2>
+    <p class="section-desc">교통·교육·의료·산업이 한 곳에 집결된<br>한국형 실리콘밸리 브레인시티</p>
+
+    <!-- 광역 입지 이미지 슬롯 -->
+    <div class="section-img-slot has-img" id="img-location">
+      <img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Wide-area-location.avif" alt="광역 입지 이미지">
+      <div class="section-img-placeholder">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="20" r="10" stroke="#0078C1" stroke-width="2"/>
+          <path d="M24 30c0 0-12 8-12 14h24c0-6-12-14-12-14z" stroke="#0078C1" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="24" cy="20" r="3" fill="#0078C1" opacity="0.5"/>
+        </svg>
+        <span>광역 입지 이미지</span>
+        <small>권장 사이즈: 750 × 420px</small>
+      </div>
+    </div>
+
+    <!-- KAIST 강조 -->
+    <div class="kaist-highlight fade-up">
+      <h3>🎓 KAIST 평택캠퍼스</h3>
+      <p>미래형 인재 양성, AI·시스템반도체 첨단분야<br>2029년 1단계 준공 예정</p>
+      <div class="kaist-dist">
+        단지에서 <span>도보 1분</span> · 약 100m
+      </div>
+    </div>
+
+    <div class="transport-card fade-up">
+      <div class="transport-header">
+        <div class="transport-icon">🏥</div>
+        <div>
+          <div class="transport-title">아주대학교병원 (예정)</div>
+          <div class="transport-sub">경기남부권 의료 거점 · 2031년 개원 예정</div>
+        </div>
+      </div>
+      <div class="transport-items">
+        <div class="transport-item">
+          <span class="transport-item-name">아주대학교 평택병원</span>
+          <span class="transport-item-dist">도보 8분 · 약 650m</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="transport-card fade-up">
+      <div class="transport-header">
+        <div class="transport-icon">🚆</div>
+        <div>
+          <div class="transport-title">광역 교통망</div>
+          <div class="transport-sub">SRT · 지하철 · KTX · GTX</div>
+        </div>
+      </div>
+      <div class="transport-items">
+        <div class="transport-item">
+          <span class="transport-item-name">SRT · 1호선 평택지제역</span>
+          <span class="transport-item-dist">차량 이용</span>
+        </div>
+        <div class="transport-item">
+          <span class="transport-item-name">수원발 KTX</span>
+          <span class="transport-item-dist">예정</span>
+        </div>
+        <div class="transport-item">
+          <span class="transport-item-name">GTX-A 노선</span>
+          <span class="transport-item-dist">예정</span>
+        </div>
+        <div class="transport-item">
+          <span class="transport-item-name">경부고속도로 · 평택제천고속도로</span>
+          <span class="transport-item-dist">인접</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="transport-card fade-up">
+      <div class="transport-header">
+        <div class="transport-icon">🎒</div>
+        <div>
+          <div class="transport-title">안심 교육 환경</div>
+          <div class="transport-sub">반경 500m 내 초·중·유치원 예정</div>
+        </div>
+      </div>
+      <div class="transport-items">
+        <div class="transport-item">
+          <span class="transport-item-name">도일1초등학교 (가칭)</span>
+          <span class="transport-item-dist">2026.09 개교예정</span>
+        </div>
+        <div class="transport-item">
+          <span class="transport-item-name">도일2초등학교 (가칭)</span>
+          <span class="transport-item-dist">2028.03 개교예정</span>
+        </div>
+        <div class="transport-item">
+          <span class="transport-item-name">도일1유치원 (가칭)</span>
+          <span class="transport-item-dist">2027.09 개원예정</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="transport-card fade-up">
+      <div class="transport-header">
+        <div class="transport-icon">🛒</div>
+        <div>
+          <div class="transport-title">생활 인프라</div>
+          <div class="transport-sub">대형마트 · 기업 · 의료 인접</div>
+        </div>
+      </div>
+
+
+      <div class="transport-items">
+        <div class="transport-item">
+          <span class="transport-item-name">코스트코 평택점</span>
+          <span class="transport-item-dist">인근</span>
+        </div>
+        <div class="transport-item">
+          <span class="transport-item-name">홈플러스 송탄점</span>
+          <span class="transport-item-dist">인근</span>
+        </div>
+        <div class="transport-item">
+          <span class="transport-item-name">삼성전자 평택캠퍼스</span>
+          <span class="transport-item-dist">인접</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== PREMIUM 6 ===== -->
+<section id="business-overview">
+  <div class="section-inner">
+
+    <!-- 프리미엄 헤더: 이미지 + 텍스트 좌우 배치 -->
+    <div class="premium-hero-row">
+      <div class="premium-hero-img-slot" id="img-premium-hero">
+        <img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/PREMIUM6.avif" alt="6가지 프리미엄 이미지">
+        <div class="premium-hero-img-placeholder">
+          <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="40" height="32" rx="4" stroke="#0078C1" stroke-width="2"/>
+            <circle cx="17" cy="20" r="4" stroke="#0078C1" stroke-width="2"/>
+            <path d="M4 32l10-8 8 6 8-10 14 10" stroke="#0078C1" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <span>이미지</span>
+        </div>
+      </div>
+      <div class="premium-hero-text">
+        <h2 class="section-title">비스타동원만의<br><em>6가지 프리미엄</em></h2>
+        <p class="section-desc">교육·교통·생활인프라까지 브레인시티 완벽한 가치의 완성작</p>
+      </div>
+    </div>
+
+    <div class="premium-grid">
+      <div class="premium-card fade-up">
+        <span class="premium-icon">🎓</span>
+        <div class="premium-img-slot"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Education.avif" alt="안심 교육 이미지"></div>
+        <div class="premium-name">한걸음에 누리는<br>안심 교육</div>
+        <div class="premium-detail">
+          단지 앞 <strong>초등학교 2개소</strong>(예정)<br>
+          유치원·중학교 도보권 예정
+        </div>
+      </div>
+      <div class="premium-card fade-up stagger-1">
+        <span class="premium-icon">🚆</span>
+        <div class="premium-img-slot"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Traffic.avif" alt="광역 교통 이미지"></div>
+        <div class="premium-name">막힘 없는<br>광역 교통</div>
+        <div class="premium-detail">
+          <strong>SRT·1호선</strong> 평택지제역<br>
+          GTX-A(예정) 광역교통
+        </div>
+      </div>
+      <div class="premium-card fade-up stagger-2">
+        <span class="premium-icon">📈</span>
+        <div class="premium-img-slot"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Vision.avif" alt="미래가치 이미지"></div>
+        <div class="premium-name">살수록 높아지는<br>미래가치</div>
+        <div class="premium-detail">
+          <strong>KAIST 평택캠퍼스</strong>(예정)<br>
+          아주대병원·삼성전자 인접
+        </div>
+      </div>
+      <div class="premium-card fade-up stagger-3">
+        <span class="premium-icon">🌿</span>
+        <div class="premium-img-slot"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Landscape.avif" alt="조경 특화 이미지"></div>
+        <div class="premium-name">에버랜드 협업<br>조경 특화</div>
+        <div class="premium-detail">
+          <strong>삼성물산 에버스케이프</strong><br>
+          다양한 테마의 조경 예정
+        </div>
+      </div>
+      <div class="premium-card fade-up">
+        <span class="premium-icon">🏢</span>
+        <div class="premium-img-slot"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Design.avif" alt="단지 설계 이미지"></div>
+        <div class="premium-name">생활에 자부심이 되는<br>단지설계</div>
+        <div class="premium-detail">
+          커튼월룩 외관 디자인, 최고급 마감재,<br>
+          익스클루시브 웰니스 센터를 갖춘<br>
+          커뮤니티, <strong>전 세대 남향위주 설계</strong>
+        </div>
+      </div>
+      <div class="premium-card fade-up stagger-1">
+        <span class="premium-icon">🏅</span>
+        <div class="premium-img-slot"><img src="https://raw.githubusercontent.com/GHOST-HUG/VISTA-DONGWON/refs/heads/main/Brand.avif" alt="브랜드 프리미엄 이미지"></div>
+        <div class="premium-name">동원개발<br>브랜드 프리미엄</div>
+        <div class="premium-detail">
+          시공능력 <strong>전국 32위</strong><br>
+          신용등급 AAA · HUG 보증
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== FUTURE VALUE (호재 블러) ===== -->
+<section class="future-section">
+  <div class="section-inner">
+    <span class="section-label">FUTURE VALUE</span>
+    <h2 class="section-title" style="color:#fff">살수록 높아지는<br><em>개발 호재</em></h2>
+    <p class="section-desc">브레인시티 성장 시나리오, 상세 내용은 상담을 통해 안내드립니다</p>
+
+    <div class="future-cards">
+      <div class="future-card">
+        <div class="future-num">1</div>
+        <div class="future-info">
+          <div class="future-title">🏭 삼성전자 평택캠퍼스 확장</div>
+          <div class="future-blur-wrap">
+            <div class="future-blur-text">P4·P5 라인 증설로 고급 인력 수요 폭발적 증가 예상. 직주근접 수요 지속 유입. 임대·매매 모두 수요 증가 전망. 상세 시세 영향 분석 및 투자 수익률 예측 자료 보유.</div>
+            <div class="future-blur-overlay"><span class="future-lock">🔒 상담 시 안내</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="future-card">
+        <div class="future-num">2</div>
+        <div class="future-info">
+          <div class="future-title">🎓 KAIST 평택캠퍼스 입주</div>
+          <div class="future-blur-wrap">
+            <div class="future-blur-text">2029년 1단계 준공 시 교수·연구원·학생 수천 명 유입. 배후 주거 수요 직결. 브레인시티 아파트 시세 상승 기대치 및 임대 수요 분석 자료 보유.</div>
+            <div class="future-blur-overlay"><span class="future-lock">🔒 상담 시 안내</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="future-card">
+        <div class="future-num">3</div>
+        <div class="future-info">
+          <div class="future-title">🏥 아주대병원 평택 개원</div>
+          <div class="future-blur-wrap">
+            <div class="future-blur-text">2031년 개원 예정. 의사·간호사·직원 다수 유입. 의료진 선호 주거지 비스타동원. 시세 영향 및 특수 수요층 분석 상세 안내 가능.</div>
+            <div class="future-blur-overlay"><span class="future-lock">🔒 상담 시 안내</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="future-card">
+        <div class="future-num">4</div>
+        <div class="future-info">
+          <div class="future-title">🚆 GTX-A 수혜</div>
+          <div class="future-blur-wrap">
+            <div class="future-blur-text">GTX-A 노선 개통 시 수도권 접근성 대폭 향상. 평택지제역 환승 연계. 투자 가치 및 실거주 수요 증가 전망. 개통 일정 및 시세 영향 분석 가능.</div>
+            <div class="future-blur-overlay"><span class="future-lock">🔒 상담 시 안내</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="future-cta-row">
+      <p>4가지 개발 호재의 <strong style="color:var(--blue-light)">시세 영향 분석 자료</strong>와<br>층별 투자 수익률까지 상담 시 안내드립니다</p>
+      <a href="#consult-form">호재 상세 + 분양가 함께 확인하기</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== BRAND TRUST ===== -->
+<section class="trust-section">
+  <div class="section-inner">
+    <span class="section-label">BRAND TRUST</span>
+    <h2 class="section-title">50년 역사<br><em>동원개발의 신뢰</em></h2>
+    <p class="section-desc">VISTA 동원의 50년이 함께합니다</p>
+
+    <div class="trust-stats">
+      <div class="trust-stat fade-up">
+        <div class="trust-stat-num">32<span>위</span></div>
+        <div class="trust-stat-label">2025년 시공능력평가<br>전국 32위</div>
+      </div>
+      <div class="trust-stat fade-up stagger-1">
+        <div class="trust-stat-num">8.8<span>만</span></div>
+        <div class="trust-stat-label">50년간 전국<br>88,000세대 공급</div>
+      </div>
+    </div>
+
+    <div class="trust-items">
+      <div class="trust-item fade-up">
+        <span class="trust-item-icon">🏆</span>
+        <div class="trust-item-text">
+          <div class="trust-item-title">시공능력 부울경 8년 연속 1위</div>
+          <div class="trust-item-sub">2025년 기준 · 영남권 최고 신뢰 건설사</div>
+        </div>
+      </div>
+      <div class="trust-item fade-up stagger-1">
+        <span class="trust-item-icon">⭐</span>
+        <div class="trust-item-text">
+          <div class="trust-item-title">신용등급 AAA</div>
+          <div class="trust-item-sub">HUG(주택도시보증공사) · 건설공제조합 AAA</div>
+        </div>
+      </div>
+      <div class="trust-item fade-up stagger-2">
+        <span class="trust-item-icon">📊</span>
+        <div class="trust-item-text">
+          <div class="trust-item-title">코스닥 상장 우량기업</div>
+          <div class="trust-item-sub">부채비율 32% (2025년 1분기) 재무건전성 우수</div>
+        </div>
+      </div>
+      <div class="trust-item fade-up stagger-3">
+        <span class="trust-item-icon">🌿</span>
+        <div class="trust-item-text">
+          <div class="trust-item-title">한경주거문화대상 3년 연속 수상</div>
+          <div class="trust-item-sub">2023년 기준 · 주거 품질 공식 인증</div>
+        </div>
+      </div>
+      <div class="trust-item fade-up">
+        <span class="trust-item-icon">🏗️</span>
+        <div class="trust-item-text">
+          <div class="trust-item-title">브레인시티 내 도급순위 3위</div>
+          <div class="trust-item-sub">평가액 14,574억원 · 동일 단지 내 최고 수준</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== KAKAO CHANNEL ===== -->
+
+<!-- ===== CONSULT FORM ===== -->
+<section class="form-section" id="consult-form">
+  <div class="section-inner">
+    <div class="form-head">
+      <div class="form-head-label">FREE CONSULTATION</div>
+      <div class="form-head-title">분양가 · 잔여세대<br>직접 확인하세요</div>
+      <div class="form-head-sub">상담 신청 시 층별 가격표 + 잔여세대 현황 + 특별혜택을 안내드립니다</div>
+      <div class="form-benefits">
+        <span class="form-benefit">💰 층별 가격표</span>
+        <span class="form-benefit">🏠 잔여세대 현황</span>
+        <span class="form-benefit">🎁 특별혜택 안내</span>
+      </div>
+    </div>
+
+    <!-- 탭형 상담/방문 신청 폼 -->
+    <div class="cv-card">
+      <!-- TABS -->
+      <div class="cv-tabs">
+        <button class="cv-tab-btn active" onclick="cvSwitchTab('consult',this)"><span class="cv-tab-icon">📞</span>상담 신청</button>
+        <button class="cv-tab-btn" onclick="cvSwitchTab('visit',this)"><span class="cv-tab-icon">📅</span>방문 신청</button>
+      </div>
+
+      <!-- ══ 상담 신청 ══ -->
+      <div class="cv-panel active" id="cv-panel-consult">
+        <div class="cv-err" id="cv-err-c"></div>
+        <div class="cv-ok" id="cv-ok-c">
+          <div class="cv-ok-ico">✓</div>
+          <h2>상담 신청 완료!</h2>
+          <p>담당자가 <b>1시간 내</b> 연락드리겠습니다.<br>평일 오전 9시 ~ 오후 6시 운영<br><br><b>브레인시티 동원 비스타</b>에 관심 가져주셔서 감사합니다.</p>
+        </div>
+        <form id="cv-form-c" novalidate>
+          <div class="cv-row c2">
+            <div class="cv-field"><label>이름 <span class="req">*</span></label><input type="text" id="cv-c-nm" placeholder="홍길동" maxlength="20"></div>
+            <div class="cv-field"><label>연락처 <span class="req">*</span></label><div class="cv-ph-wrap"><span class="cv-ph-prefix">010-</span><input class="cv-ph-input" type="tel" id="cv-c-ph" placeholder="숫자만 입력하세요~" maxlength="9"></div></div>
+          </div>
+          <div class="cv-row c1">
+            <div class="cv-field"><label>관심 평형</label>
+              <div class="cv-sw"><select id="cv-c-py"><option value="">선택해주세요</option><option value="59A">59A (25평형)</option><option value="84A">84A (34평형)</option><option value="84B">84B (35평형)</option><option value="84C">84C (34평형)</option><option value="106A">106A (43평형)</option></select></div>
+            </div>
+          </div>
+          <div class="cv-row c2">
+            <div class="cv-field"><label>희망 상담 시간 <span class="req">*</span></label>
+              <div class="cv-sw"><select id="cv-c-hh"><option value="">시간</option><option value="09">오전 9시</option><option value="10">오전 10시</option><option value="11">오전 11시</option><option value="12">오후 12시</option><option value="13">오후 1시</option><option value="14">오후 2시</option><option value="15">오후 3시</option><option value="16">오후 4시</option><option value="17">오후 5시</option><option value="18">오후 6시</option></select></div>
+            </div>
+            <div class="cv-field"><label>&nbsp;</label>
+              <div class="cv-sw"><select id="cv-c-mm"><option value="">분</option><option value="00">00분</option><option value="30">30분</option></select></div>
+            </div>
+          </div>
+          <div class="cv-agree" onclick="cvToggleCb('cv-cb-c')">
+            <div class="cv-cb-box" id="cv-cb-c"></div>
+            <span class="cv-agree-text">개인정보 수집·이용에 동의합니다. 수집된 정보는 상담 목적으로만 활용되며 상담 완료 후 즉시 파기됩니다. <b>*</b></span>
+          </div>
+          <button class="cv-sub-btn" type="submit">♦ &nbsp;상담 신청하기</button>
+          <p class="cv-note">담당자가 <b>1시간 내</b> 연락드립니다 · 평일 오전 9시~오후 6시</p>
+        </form>
+      </div>
+
+      <!-- ══ 방문 신청 ══ -->
+      <div class="cv-panel" id="cv-panel-visit">
+        <div class="cv-err" id="cv-err-v"></div>
+        <div class="cv-ok" id="cv-ok-v">
+          <div class="cv-ok-ico">✓</div>
+          <h2>방문 신청 완료!</h2>
+          <p>선택하신 날짜에 맞춰 담당자가<br><b>1시간 내</b> 방문 일정을 확정해 드립니다.<br><br><b>브레인시티 동원 비스타</b>에서 뵙겠습니다.</p>
+        </div>
+        <form id="cv-form-v" novalidate>
+          <div class="cv-row c2">
+            <div class="cv-field"><label>이름 <span class="req">*</span></label><input type="text" id="cv-v-nm" placeholder="홍길동" maxlength="20"></div>
+            <div class="cv-field"><label>연락처 <span class="req">*</span></label><div class="cv-ph-wrap"><span class="cv-ph-prefix">010-</span><input class="cv-ph-input" type="tel" id="cv-v-ph" placeholder="숫자만 입력하세요~" maxlength="9"></div></div>
+          </div>
+          <div class="cv-row c1">
+            <div class="cv-field"><label>관심 평형</label>
+              <div class="cv-sw"><select id="cv-v-py"><option value="">선택해주세요</option><option value="59A">59A (25평형)</option><option value="84A">84A (34평형)</option><option value="84B">84B (35평형)</option><option value="84C">84C (34평형)</option><option value="106A">106A (43평형)</option></select></div>
+            </div>
+          </div>
+          <!-- 달력 -->
+          <div class="cv-row c1">
+            <div class="cv-field">
+              <label>방문 희망 날짜 <span class="req">*</span></label>
+              <div class="cv-cal-wrap">
+                <div class="cv-cal-head">
+                  <button type="button" class="cv-cal-nav" id="cv-cal-prev">&#8249;</button>
+                  <span id="cv-cal-title"></span>
+                  <button type="button" class="cv-cal-nav" id="cv-cal-next">&#8250;</button>
+                </div>
+                <div class="cv-cal-dow"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+                <div class="cv-cal-grid" id="cv-cal-grid"></div>
+                <div class="cv-cal-sel-disp">
+                  <span>선택 날짜</span>
+                  <span class="dval empty" id="cv-cal-disp">날짜를 선택해주세요</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cv-row c2">
+            <div class="cv-field"><label>방문 희망 시간 <span class="req">*</span></label>
+              <div class="cv-sw"><select id="cv-v-hh"><option value="">시간</option><option value="09">오전 9시</option><option value="10">오전 10시</option><option value="11">오전 11시</option><option value="12">오후 12시</option><option value="13">오후 1시</option><option value="14">오후 2시</option><option value="15">오후 3시</option><option value="16">오후 4시</option><option value="17">오후 5시</option><option value="18">오후 6시</option></select></div>
+            </div>
+            <div class="cv-field"><label>&nbsp;</label>
+              <div class="cv-sw"><select id="cv-v-mm"><option value="">분</option><option value="00">00분</option><option value="30">30분</option></select></div>
+            </div>
+          </div>
+          <div class="cv-agree" onclick="cvToggleCb('cv-cb-v')">
+            <div class="cv-cb-box" id="cv-cb-v"></div>
+            <span class="cv-agree-text">개인정보 수집·이용에 동의합니다. 수집된 정보는 상담 목적으로만 활용되며 상담 완료 후 즉시 파기됩니다. <b>*</b></span>
+          </div>
+          <button class="cv-sub-btn" type="submit">♦ &nbsp;방문 신청하기</button>
+          <p class="cv-note">담당자가 <b>1시간 내</b> 일정을 확정해 드립니다 · 평일 오전 9시~오후 6시</p>
+        </form>
+      </div>
+    </div><!-- /cv-card -->
+
+    <p class="form-notice">🔒 개인정보 안전하게 처리됩니다</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-brand">
+    <span>브레인시티 <span>비스타동원</span></span>
+  </div>
+  <div class="footer-addr">
+    현장: 경기도 평택시 장안동 브레인시티 공동주택 4BL<br>
+    견본주택: 경기도 평택시 죽백동<br>
+    시행·시공: (주)동원개발<br>
+    상담전화: <a href="tel:1688-5925" style="color:rgba(255,255,255,0.5)">1688-5925</a>
+  </div>
+  <div class="footer-disclaimer">
+    ※ 본 페이지에 포함된 단지 조감도, 평면도, 개발 호재, 입주 일정, 시설 내용 등은 인허가 진행 상황에 따라 변경될 수 있으며, 계약의 효력이 없습니다.<br>
+    ※ 분양가, 평형별 세대수, 입주 일정 등은 변경될 수 있으며 정확한 내용은 분양사무소에서 확인하시기 바랍니다.<br>
+    ※ 본 광고물은 당근비즈니스 광고 집행을 위해 제작된 마케팅 자료입니다.
+  </div>
+</footer>
+
+<script>
+// ===== HERO PARTICLE ANIMATION =====
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], animId;
+
+  const COLORS = [
+    'rgba(255,255,255,',
+    'rgba(0,174,239,',
+    'rgba(100,210,255,',
+    'rgba(180,230,255,',
+  ];
+
+  function resize() {
+    const hero = canvas.parentElement;
+    W = canvas.width  = hero.offsetWidth;
+    H = canvas.height = hero.offsetHeight;
+  }
+
+  function rand(min, max) { return Math.random() * (max - min) + min; }
+
+  class Particle {
+    constructor() { this.reset(true); }
+    reset(init) {
+      this.x = rand(0, W);
+      this.y = init ? rand(0, H) : H + 10;
+      this.r = rand(1, 4);
+      this.vx = rand(-0.1, 0.1);
+      this.vy = rand(-0.15, -0.35);
+      this.alpha = rand(0.15, 0.7);
+      this.fadeDir = Math.random() > 0.5 ? 1 : -1;
+      this.fadeSpeed = rand(0.003, 0.008);
+      this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+      this.pulse = rand(0, Math.PI * 2);
+      this.pulseSpeed = rand(0.02, 0.05);
+      // 연결용
+      this.connected = false;
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.pulse += this.pulseSpeed;
+      this.alpha += this.fadeDir * this.fadeSpeed;
+      if (this.alpha > 0.75) { this.alpha = 0.75; this.fadeDir = -1; }
+      if (this.alpha < 0.08) { this.alpha = 0.08; this.fadeDir = 1; }
+      if (this.y < -20 || this.x < -20 || this.x > W + 20) this.reset(false);
+    }
+    draw() {
+      const pr = this.r + Math.sin(this.pulse) * 0.8;
+      // glow
+      const grd = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, pr * 3.5);
+      grd.addColorStop(0, this.color + (this.alpha * 0.9) + ')');
+      grd.addColorStop(1, this.color + '0)');
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, pr * 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = grd;
+      ctx.fill();
+      // core
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, pr, 0, Math.PI * 2);
+      ctx.fillStyle = this.color + this.alpha + ')';
+      ctx.fill();
+    }
+  }
+
+  // 터짐 파티클 클래스
+  class Burst {
+    constructor(x, y, color) {
+      this.x = x;
+      this.y = y;
+      this.color = color;
+      this.shards = Array.from({ length: rand(8, 14) | 0 }, () => ({
+        angle: rand(0, Math.PI * 2),
+        speed: rand(0.8, 3.5),
+        r: rand(1, 3),
+        alpha: rand(0.6, 1),
+        life: 0,
+        maxLife: rand(30, 60) | 0,
+      }));
+      this.done = false;
+    }
+    update() {
+      let alive = 0;
+      this.shards.forEach(s => {
+        s.life++;
+        s.x = (s.x || this.x) + Math.cos(s.angle) * s.speed;
+        s.y = (s.y || this.y) + Math.sin(s.angle) * s.speed;
+        s.speed *= 0.93;
+        s.alpha = Math.max(0, 1 - s.life / s.maxLife);
+        if (s.alpha > 0) alive++;
+      });
+      if (alive === 0) this.done = true;
+    }
+    draw() {
+      this.shards.forEach(s => {
+        if (!s.alpha) return;
+        const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 3);
+        grd.addColorStop(0, this.color.replace('(', '(').replace(/[\d.]+\)$/, s.alpha + ')'));
+        grd.addColorStop(1, this.color.replace(/[\d.]+\)$/, '0)'));
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
+        ctx.fillStyle = grd;
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = this.color.replace(/[\d.]+\)$/, s.alpha + ')');
+        ctx.fill();
+      });
+    }
+  }
+
+  function drawConnections() {
+    const maxDist = 90;
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < maxDist) {
+          const alpha = (1 - dist / maxDist) * 0.18;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = 'rgba(150,220,255,' + alpha + ')';
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  let bursts = [];
+  function init() {
+    resize();
+    const count = Math.min(Math.floor(W * H / 7000), 80);
+    particles = Array.from({ length: count }, () => new Particle());
+  }
+
+  function loop() {
+    ctx.clearRect(0, 0, W, H);
+    drawConnections();
+    particles.forEach(p => {
+      // 상단 도달 시 버스트 생성
+      if (p.y < 15 && Math.random() < 0.08) {
+        bursts.push(new Burst(p.x, p.y, p.color + '1)'));
+        p.reset(false);
+      }
+      p.update();
+      p.draw();
+    });
+    // 버스트 업데이트
+    bursts.forEach(b => { b.update(); b.draw(); });
+    bursts = bursts.filter(b => !b.done);
+    animId = requestAnimationFrame(loop);
+  }
+
+  window.addEventListener('resize', () => { resize(); });
+  init();
+  loop();
+})();
+
+// ===== UNIT TAB SWITCH =====
+function switchTab(type, el) {
+  document.querySelectorAll('.unit-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.unit-content').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-' + type).classList.add('active');
+}
+
+// ===== CONSULT / VISIT FORM =====
+/* 탭 전환 */
+function cvSwitchTab(id, btn) {
+  document.querySelectorAll('.cv-tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.cv-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('cv-panel-' + id).classList.add('active');
+}
+
+/* 체크박스 */
+const cvCbState = {};
+function cvToggleCb(id) {
+  cvCbState[id] = !cvCbState[id];
+  document.getElementById(id).classList.toggle('on', !!cvCbState[id]);
+}
+
+/* 전화번호 자동 포맷 */
+['cv-c-ph','cv-v-ph'].forEach(function(id) {
+  const el = document.getElementById(id);
+  el.addEventListener('input', function() {
+    let digits = this.value.replace(/\D/g,'').slice(0, 8);
+    if (digits.length <= 4) this.value = digits;
+    else this.value = digits.slice(0,4) + '-' + digits.slice(4);
+  });
+});
+
+/* 달력 */
+let cvCalY, cvCalM, cvSelDate = null;
+const CV_DOW_KO = ['일','월','화','수','목','금','토'];
+const CV_MON_KO = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+
+function cvInitCal() {
+  const now = new Date();
+  cvCalY = now.getFullYear(); cvCalM = now.getMonth();
+  cvRenderCal();
+}
+
+function cvRenderCal() {
+  document.getElementById('cv-cal-title').textContent = cvCalY + '년 ' + CV_MON_KO[cvCalM];
+  const grid = document.getElementById('cv-cal-grid');
+  grid.innerHTML = '';
+  const today = new Date(); today.setHours(0,0,0,0);
+  const firstDow = new Date(cvCalY, cvCalM, 1).getDay();
+  const lastD    = new Date(cvCalY, cvCalM+1, 0).getDate();
+  for (let i = 0; i < firstDow; i++) {
+    const el = document.createElement('button');
+    el.type='button'; el.className='cv-cal-day empty'; el.disabled=true; el.textContent='';
+    grid.appendChild(el);
+  }
+  for (let d = 1; d <= lastD; d++) {
+    const date = new Date(cvCalY, cvCalM, d);
+    const dow  = date.getDay();
+    const btn  = document.createElement('button');
+    btn.type='button'; btn.textContent=d;
+    let cls = 'cv-cal-day';
+    if (dow===0) cls+=' sun';
+    if (dow===6) cls+=' sat';
+    if (date < today) btn.disabled=true;
+    else if (date.getTime()===today.getTime()) cls+=' today';
+    if (cvSelDate && cvSelDate.getFullYear()===cvCalY && cvSelDate.getMonth()===cvCalM && cvSelDate.getDate()===d) cls+=' sel';
+    btn.className=cls;
+    btn.addEventListener('click', function(){ cvPickDate(date); });
+    grid.appendChild(btn);
+  }
+}
+
+function cvPickDate(date) {
+  cvSelDate = date;
+  cvRenderCal();
+  const disp = document.getElementById('cv-cal-disp');
+  const y=date.getFullYear(), m=date.getMonth()+1, d=date.getDate(), dow=CV_DOW_KO[date.getDay()];
+  disp.textContent = y+'년 '+m+'월 '+d+'일 ('+dow+')';
+  disp.classList.remove('empty');
+}
+
+document.getElementById('cv-cal-prev').addEventListener('click', function(){ cvCalM--; if(cvCalM<0){cvCalM=11;cvCalY--;} cvRenderCal(); });
+document.getElementById('cv-cal-next').addEventListener('click', function(){ cvCalM++; if(cvCalM>11){cvCalM=0;cvCalY++;} cvRenderCal(); });
+cvInitCal();
+
+/* 공통 전송 */
+async function cvDoSend(data) {
+  try {
+    await fetch('/.netlify/functions/send-sms', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
+  } catch(e) {}
+  return true;
+}
+function cvShowErr(id, msg) {
+  const el = document.getElementById('cv-err-'+id);
+  el.textContent=msg; el.style.display='block';
+  el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function cvHideErr(id) { document.getElementById('cv-err-'+id).style.display='none'; }
+function cvShowOk(id) {
+  document.getElementById('cv-form-'+id).style.display='none';
+  const ok=document.getElementById('cv-ok-'+id);
+  ok.style.display='flex'; ok.scrollIntoView({behavior:'smooth',block:'center'});
+  trackConversion();
+}
+
+/* 상담 신청 */
+document.getElementById('cv-form-c').addEventListener('submit', async function(e) {
+  e.preventDefault(); cvHideErr('c');
+  const nm=document.getElementById('cv-c-nm').value.trim();
+  const ph='010-'+document.getElementById('cv-c-ph').value.trim();
+  const py=document.getElementById('cv-c-py').value||'미정';
+  const hh=document.getElementById('cv-c-hh').value;
+  const mm=document.getElementById('cv-c-mm').value;
+  if(!nm){cvShowErr('c','이름을 입력해주세요.');return;}
+  if(ph.length<12){cvShowErr('c','연락처를 정확히 입력해주세요.');return;}
+  if(!hh){cvShowErr('c','희망 상담 시간을 선택해주세요.');return;}
+  if(!cvCbState['cv-cb-c']){cvShowErr('c','개인정보 수집·이용에 동의해주세요.');return;}
+  const btn=this.querySelector('.cv-sub-btn'); btn.disabled=true; btn.textContent='전송 중...';
+  const time=hh?(hh+':'+(mm||'00')):'미정';
+  await cvDoSend({name:nm, phone:ph, type:py, time:time, formType:'상담신청', project:'브레인시티 동원 비스타'});
+  cvShowOk('c');
+});
+
+/* 방문 신청 */
+document.getElementById('cv-form-v').addEventListener('submit', async function(e) {
+  e.preventDefault(); cvHideErr('v');
+  const nm=document.getElementById('cv-v-nm').value.trim();
+  const ph='010-'+document.getElementById('cv-v-ph').value.trim();
+  const py=document.getElementById('cv-v-py').value||'미정';
+  const hh=document.getElementById('cv-v-hh').value;
+  const mm=document.getElementById('cv-v-mm').value;
+  if(!nm){cvShowErr('v','이름을 입력해주세요.');return;}
+  if(ph.length<12){cvShowErr('v','연락처를 정확히 입력해주세요.');return;}
+  if(!cvSelDate){cvShowErr('v','방문 희망 날짜를 선택해주세요.');return;}
+  if(!hh){cvShowErr('v','방문 희망 시간을 선택해주세요.');return;}
+  if(!cvCbState['cv-cb-v']){cvShowErr('v','개인정보 수집·이용에 동의해주세요.');return;}
+  const btn=this.querySelector('.cv-sub-btn'); btn.disabled=true; btn.textContent='전송 중...';
+  const y=cvSelDate.getFullYear(),m=cvSelDate.getMonth()+1,d=cvSelDate.getDate(),dow=CV_DOW_KO[cvSelDate.getDay()];
+  const dateStr=y+'년 '+m+'월 '+d+'일 ('+dow+')';
+  const time=hh?(hh+':'+(mm||'00')):'미정';
+  await cvDoSend({name:nm, phone:ph, type:py, time:time+' ('+dateStr+')', formType:'방문예약', project:'브레인시티 동원 비스타'});
+  cvShowOk('v');
+});
+
+// ===== CONVERSION TRACKING =====
+function trackConversion() {
+  // 당근 픽셀 (픽셀 ID 교체 필요)
+  if (typeof window.karrotPixel !== 'undefined') {
+    window.karrotPixel.track('CompleteRegistration');
+  }
+  // GA4 (측정 ID 교체 필요)
+  if (typeof window.gtag !== 'undefined') {
+    window.gtag('event', 'generate_lead', {
+      event_category: '분양상담',
+      event_label: '브레인시티_비스타동원'
+    });
+  }
+}
+
+// ===== IMAGE SLIDER =====
+const sliderState = {};
+function sliderInit(id) {
+  if (!sliderState[id]) sliderState[id] = { idx: 0 };
+}
+function slideTo(id, idx) {
+  sliderInit(id);
+  const slider = document.getElementById(id);
+  if (!slider) return;
+  const slides = slider.querySelectorAll('.img-slider-slide');
+  idx = Math.max(0, Math.min(idx, slides.length - 1));
+  sliderState[id].idx = idx;
+  slider.querySelector('.img-slider-track').style.transform = `translateX(-${idx * 100}%)`;
+  const dots = document.getElementById(id + '-dots');
+  if (dots) dots.querySelectorAll('.img-slider-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+}
+function slideMove(id, dir) {
+  sliderInit(id);
+  const slider = document.getElementById(id);
+  if (!slider) return;
+  const total = slider.querySelectorAll('.img-slider-slide').length;
+  let next = (sliderState[id].idx + dir + total) % total;
+  slideTo(id, next);
+}
+function sliderAutoPlay(id) {
+  sliderInit(id);
+  sliderState[id].timer = setInterval(() => slideMove(id, 1), 2000);
+  const slider = document.getElementById(id);
+  if (slider) {
+    slider.addEventListener('mouseenter', () => clearInterval(sliderState[id].timer));
+    slider.addEventListener('mouseleave', () => {
+      clearInterval(sliderState[id].timer);
+      sliderState[id].timer = setInterval(() => slideMove(id, 1), 2000);
+    });
+  }
+}
+sliderAutoPlay('community-slider');
+sliderAutoPlay('smart-slider');
+
+// ===== LIGHTBOX =====
+(function() {
+  const overlay = document.createElement('div');
+  overlay.id = 'lightbox';
+  overlay.innerHTML = `
+    <div id="lightbox-bg"></div>
+    <button id="lightbox-close">&#x2715;</button>
+    <img id="lightbox-img" src="" alt="">
+  `;
+  document.body.appendChild(overlay);
+
+  const style = document.createElement('style');
+  style.textContent = `
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox-bg {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(4px);
+    }
+    #lightbox-img {
+      position: relative;
+      max-width: 92vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      animation: lbIn .2s ease;
+    }
+    @keyframes lbIn {
+      from { opacity: 0; transform: scale(.93); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      z-index: 1;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #fff;
+      font-size: 22px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .lightbox-trigger {
+      cursor: zoom-in;
+    }
+  `;
+  document.head.appendChild(style);
+
+  function open(src, alt) {
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    img.alt = alt || '';
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('lightbox-bg').addEventListener('click', close);
+  document.getElementById('lightbox-close').addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+  function bindImages() {
+    document.querySelectorAll(
+      '.img-slider-slide img, .section-img-slot img, .premium-img-slot img, .premium-hero-img-slot img, .unit-floor-img img'
+    ).forEach(img => {
+      if (img.hasAttribute('data-lb')) return;
+      img.setAttribute('data-lb', '1');
+      img.classList.add('lightbox-trigger');
+      img.addEventListener('click', function() {
+        if (this.src && !this.src.endsWith('/') && this.naturalWidth > 0) {
+          open(this.src, this.alt);
+        }
+      });
+    });
+  }
+
+  bindImages();
+  new MutationObserver(bindImages).observe(document.body, { childList: true, subtree: true });
+})();
+
+// ===== INTERSECTION OBSERVER (fade-up) =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ===== SCROLL BEHAVIOR =====
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const floatCta = document.querySelector('.float-cta');
+  if (scrollY < 100) {
+    floatCta.style.opacity = '0';
+    floatCta.style.pointerEvents = 'none';
+  } else {
+    floatCta.style.opacity = '1';
+    floatCta.style.pointerEvents = 'auto';
+  }
+});
+
+// 초기 숨김
+document.querySelector('.float-cta').style.opacity = '0';
+document.querySelector('.float-cta').style.transition = 'opacity 0.3s ease';
+</script>
+</body>
+</html>
